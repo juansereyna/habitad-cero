@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hábitat Cero</title>
+<meta name="description" content="Diseño y acabados para espacios en obra gris en Bogotá y la Sabana.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Caveat:wght@500;700&display=swap">
+<style>
+/* Marca Hábitat Cero: un solo mundo visual (cal + carbón + ladrillo), igual en tema claro u oscuro del visor */
+:root{--cal:#F3EEE6;--carbon:#1E2326;--ladrillo:#B5532F;--concreto:#A9A49B;--musgo:#55634A;color-scheme:light}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cal);color:var(--carbon)}
+a{color:var(--ladrillo)}a:hover{color:#8E3F22}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #D86A43;outline-offset:3px}
+img{max-width:100%}
+section[id]{scroll-margin-top:72px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20}
+.menu-btn{display:none;min-height:44px;padding:0 18px;border:1px solid #6E6A64;border-radius:999px;background:transparent;color:var(--cal);font:600 15px 'Inter',system-ui,sans-serif;cursor:pointer}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* Tablet */
+@media (max-width:1024px){
+ .sec{padding-top:72px!important;padding-bottom:72px!important}
+ .hitos{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ .hitos li{padding:24px!important;border-right:0!important;border-bottom:1px solid #DDD7CD}
+}
+/* Celular */
+@media (max-width:860px){
+ .menu-btn{display:inline-flex;align-items:center}
+ .nav{flex-wrap:nowrap!important}
+ .nav-links{display:none!important;position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch!important;gap:0!important;padding:8px 20px 20px;background:var(--carbon);border-top:1px solid #33393D}
+ .nav-links a{padding:14px 4px;border-bottom:1px solid #33393D;font-size:17px}
+ .nav-links a:last-child{margin-top:12px;border-bottom:0;justify-content:center;text-align:center}
+ header.abierto .nav-links{display:flex!important}
+ header{position:sticky}
+ .nav{position:relative}
+}
+@media (max-width:640px){
+ [data-hide-sm]{display:none!important}
+ .hero-cap{right:12px!important;bottom:12px!important;font-size:11px!important;padding:6px 10px!important}
+ .sec{padding-top:56px!important;padding-bottom:56px!important;padding-left:16px!important;padding-right:16px!important}
+ section,footer,.nav{padding-left:16px!important;padding-right:16px!important}
+ .hitos{grid-template-columns:1fr!important}
+ .hitos li{padding:20px 0!important}
+ .hitos li:last-child{padding:20px!important}
+ .form{grid-template-columns:1fr!important}
+ #inicio{padding-top:32px!important;padding-bottom:48px!important}
+ #inicio figure{border-radius:18px!important}
+}
+</style>
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Hábitat Cero">
+<meta property="og:description" content="Tu espacio está en cero. Nosotros lo terminamos.">
+<meta property="og:image" content="https://juansereyna.github.io/habitad-cero/img/hc-cocina.jpg">
+</head>
+<body>
+<div style="font-family: 'Inter', -apple-system, 'Segoe UI', sans-serif; color: #1E2326; background: #F3EEE6; font-size: 17px; line-height: 1.6">
+
+<header style="background: #1E2326; color: #F3EEE6">
+<nav class="nav" style="max-width: 1240px; margin: 0 auto; padding: 18px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+<a href="#inicio" style="display: inline-flex; align-items: baseline; font-family: 'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif; font-weight: 800; font-size: 28px; letter-spacing: -0.03em; color: #F3EEE6; text-decoration: none">hábitat cer<svg viewBox="0 0 100 100" style="width: 0.56em; height: 0.56em; margin-left: 0.02em" aria-hidden="true"><defs><mask id="mn"><rect width="100" height="100" fill="#fff"></rect><rect x="76" y="48" width="20" height="34" fill="#000"></rect></mask></defs><rect x="8" y="8" width="84" height="84" rx="18" fill="none" stroke="#F3EEE6" stroke-width="15" mask="url(#mn)"></rect><path d="M86 50 L54 50" stroke="#D86A43" stroke-width="8"></path><path d="M54 50 A32 32 0 0 0 86 82" fill="none" stroke="#D86A43" stroke-width="3.5"></path></svg></a>
+<button type="button" id="menu" class="menu-btn" aria-expanded="false" aria-controls="nav-links">Menú</button>
+<div id="nav-links" class="nav-links" style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 28px; font-size: 15px">
+<a href="#como" style="color: #F3EEE6; text-decoration: none">Cómo funciona</a>
+<a href="#paquetes" style="color: #F3EEE6; text-decoration: none">Paquetes</a>
+<a href="#espacios" style="color: #F3EEE6; text-decoration: none">Espacios</a>
+<a href="#financia" style="color: #F3EEE6; text-decoration: none">Financiación</a>
+<a href="#preguntas" style="color: #F3EEE6; text-decoration: none">Preguntas</a>
+<a href="#cotiza" style="display: inline-block; padding: 12px 20px; min-height: 44px; box-sizing: border-box; background: #B5532F; color: #FBF9F5; text-decoration: none; font-weight: 600; border-radius: 999px">Cotiza tu espacio</a>
+</div>
+</nav>
+</header>
+
+<section id="inicio" style="background: #1E2326; color: #F3EEE6; padding: 48px 24px 72px">
+<div style="max-width: 1240px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px 48px">
+<h1 style="margin: 0; flex: 1 1 560px; font-family: 'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif; font-weight: 800; font-size: clamp(44px, 6.4vw, 92px); line-height: 0.98; letter-spacing: -0.03em; text-wrap: balance">Tu espacio está en cero. <span style="color: #D86A43">Nosotros lo terminamos.</span></h1>
+<div style="flex: 1 1 320px; max-width: 420px; display: flex; flex-direction: column; gap: 20px">
+<p style="margin: 0; color: #C9C3B8; font-size: 18px">Diseño y acabados para apartamentos, casas, locales y oficinas en Bogotá y la Sabana. Ves tu espacio terminado antes de empezar, y pagas cada avance cuando lo ves.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<a href="#cotiza" style="display: inline-flex; align-items: center; padding: 14px 24px; min-height: 48px; box-sizing: border-box; background: #B5532F; color: #FBF9F5; text-decoration: none; font-weight: 600; border-radius: 999px">Cotiza tu espacio</a>
+<a href="#como" style="display: inline-flex; align-items: center; padding: 14px 24px; min-height: 48px; box-sizing: border-box; border: 1px solid #6E6A64; color: #F3EEE6; text-decoration: none; font-weight: 500; border-radius: 999px">Así trabajamos</a>
+</div>
+</div>
+</div>
+
+<figure style="margin: 0; position: relative; border-radius: 28px; overflow: hidden; background: #8D8983; aspect-ratio: 1376 / 768">
+<img src="img/hc-cocina.jpg" alt="Apartamento en obra gris con el boceto en líneas blancas de la cocina terminada: muebles altos, isla con tres bancos, repisas abiertas, lámparas colgantes y una planta" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block">
+<span style="position: absolute; margin: 0; font-family: 'Caveat', cursive; font-weight: 700; color: #FFFFFF; line-height: 1; text-shadow: 0 1px 8px rgba(20,22,24,0.7); white-space: nowrap; font-size: clamp(20px, 2.6vw, 36px); left: 31%; top: 22%; transform: rotate(-3deg)">cocina integral</span>
+<span style="position: absolute; margin: 0; font-family: 'Caveat', cursive; font-weight: 700; color: #FFFFFF; line-height: 1; text-shadow: 0 1px 8px rgba(20,22,24,0.7); white-space: nowrap; font-size: clamp(20px, 2.6vw, 36px); left: 77%; top: 21%; transform: rotate(-2deg)" data-hide-sm>repisas abiertas</span>
+<span style="position: absolute; margin: 0; font-family: 'Caveat', cursive; font-weight: 700; color: #FFFFFF; line-height: 1; text-shadow: 0 1px 8px rgba(20,22,24,0.7); white-space: nowrap; font-size: clamp(20px, 2.6vw, 36px); left: 67%; top: 70%; transform: rotate(-4deg)" data-hide-sm>isla con mesón</span>
+<span style="position: absolute; margin: 0; font-family: 'Caveat', cursive; font-weight: 700; color: #FFFFFF; line-height: 1; text-shadow: 0 1px 8px rgba(20,22,24,0.7); white-space: nowrap; font-size: clamp(20px, 2.6vw, 36px); left: 50%; top: 8%; transform: rotate(-3deg)" data-hide-sm>luz cálida</span>
+<span data-hide-sm style="position: absolute; left: 20px; bottom: 18px; font-family: 'IBM Plex Mono', Menlo, monospace; font-size: 13px; color: #F3EEE6; text-shadow: 0 1px 6px rgba(20,22,24,0.8)">MOSQUERA · APTO 45,0 m² · EN CERO</span>
+<figcaption class="hero-cap" style="position: absolute; right: 20px; bottom: 16px; padding: 8px 14px; background: rgba(30,35,38,0.78); color: #F3EEE6; border-radius: 999px; font-family: 'IBM Plex Mono', Menlo, monospace; font-size: 13px">Boceto de diseño · antes de pagar la obra</figcaption>
+</figure>
+</div>
+</section>
+
+<section style="padding: 72px 24px; border-bottom: 1px solid #DDD7CD">
+<div style="max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 32px">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<p style="margin: 0; font-family: 'IBM Plex Mono', Menlo, monospace; font-size: 13px; letter-spacing: 0.12em; color: #8E3F22">CERO ANTICIPOS A CIEGAS</p>
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif; font-size: 28px; line-height: 1.1">Pagas lo que ves</h3>
+<p style="margin: 0; color: #4B5054">Reserva del 10% y el resto contra hitos que firmas: inicio, avance y entrega.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<p style="margin: 0; font-family: 'IBM Plex Mono', Menlo, monospace; font-size: 13px; letter-spacing: 0.12em; color: #8E3F22">CERO LLAMADAS DE "¿EN QUÉ VA?"</p>
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif; font-size: 28px; line-height: 1.1">Tu obra, a la vista</h3>
+<p style="margin: 0; color: #4B5054">Un tablero de obra con fotos fechadas de cada etapa, cuando quieras verlo.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<p style="margin: 0; font-family: 'IBM Plex Mono', Menlo, monospace; font-size: 13px; letter-spacing: 0.12em; color: #8E3F22">CERO SORPRESAS EN LA FECHA</p>
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif; font-size: 28px; line-height: 1.1">Si nos atrasamos, te devolvemos</h3>
+<p style="margin: 0; color: #4B5054">Fecha de entrega por escrito y [DEVOLUCIÓN POR SEMANA DE ATRASO, según contrato].</p>
+</div>
+</div>
+</section>
+
+<section id="como" class="sec" style="padding: 96px 24px">
+<div style="max-width: 1240px; margin: 0 auto; display: flex; flex-direction: column; gap: 48px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px 48px">
+<h2 style="margin: 0; flex: 1 1 520px; font-family: 'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif; font-weight: 800; font-size: clamp(36px, 4.6vw, 60px); line-height: 1; letter-spacing: -0.02em; text-wrap: balance">De cero a hogar, en cuatro hitos</h2>
+<p style="margin: 0; flex: 1 1 320px; max-width: 440px; color: #4B5054">Cada hito termina con fotos y un acta que firmas. Solo entonces pagas el siguiente tramo.</p>
+</div>
+<ol class="hitos" style="margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0; border-top: 2px solid #1E2326">
+<li style="padding: 24px 24px 24px 0; display: flex; flex-direction: column; gap: 12px; border-right: 1px solid #DDD7CD">
+<p style="margin: 0; font-family: 'IBM Plex Mono', Menlo, monospace; font-size: 14px; color: #4B5054">HITO 1 · 10%</p>
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif; font-size: 26px">Diseño y firma</h3>
+<p style="margin: 0; color: #4B5054">Medimos, diseñamos y ves tu espacio terminado en boceto y render. Firmas con una reserva.</p>
+</li>
+<li style="padding: 24px; display: flex; flex-direction: column; gap: 12px; border-right: 1px solid #DDD7CD">
+<p style="margin: 0; font-family: 'IBM Plex Mono', Menlo, monospace; font-size: 14px; color: #4B5054">HITO 2 · 30%</p>
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif; font-size: 26px">Inicio de obra</h3>
+<p style="margin: 0; color: #4B5054">Materiales en sitio, carpintería pedida y acta de inicio con fotos.</p>
+</li>
+<li style="padding: 24px; display: flex; flex-direction: column; gap: 12px; border-right: 1px solid #DDD7CD">
+<p style="margin: 0; font-family: 'IBM Plex Mono', Menlo, monospace; font-size: 14px; color: #4B5054">HITO 3 · 35%</p>
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif; font-size: 26px">Avance a la mitad</h3>
+<p style="margin: 0; color: #4B5054">Pisos instalados y estuco terminado. Lo ves en el tablero y firmas.</p>
+</li>
+<li style="padding: 24px; display: flex; flex-direction: column; gap: 12px; background: #1E2326; color: #F3EEE6">
+<p style="margin: 0; font-family: 'IBM Plex Mono', Menlo, monospace; font-size: 14px; color: #C9C3B8">HITO 4 · 25%</p>
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif; font-size: 26px">Entrega</h3>
+<p style="margin: 0; color: #C9C3B8">Recorrido contigo, pendientes cerrados y acta de entrega. Tu espacio, terminado.</p>
+</li>
+</ol>
+</div>
+</section>
+
+<section id="tablero" style="padding: 0 24px 96px">
+<div style="max-width: 1240px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
+<div style="flex: 1 1 420px; display: flex; flex-direction: column; gap: 16px">
+<p style="margin: 0; font-family: 'IBM Plex Mono', Menlo, monospace; font-size: 13px; letter-spacing: 0.12em; color: #8E3F22">TABLERO DE OBRA</p>
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif; font-weight: 800; font-size: clamp(34px, 4.2vw, 54px); line-height: 1.02; letter-spacing: -0.02em; text-wrap: balance">Sabes en qué va tu obra sin tener que llamar</h2>
+<p style="margin: 0; color: #4B5054; max-width: 480px">Cada semana subimos fotos fechadas de tu espacio. Ves qué hito está cumplido, cuánto has pagado y qué sigue. Lo abres desde el celular cuando quieras.</p>
+</div>
+<div style="flex: 1 1 440px; background: #FBF9F5; border: 1px solid #DDD7CD; border-radius: 24px; padding: 28px; display: flex; flex-direction: column; gap: 20px; box-shadow: 0 24px 60px rgba(30,35,38,0.12)">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px">
+<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'IBM Plex Mono', Menlo, monospace; font-size: 12px; color: #4B5054">MOSQUERA · TORRE 3 · 45,0 m²</span><span style="font-family: 'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif; font-weight: 700; font-size: 24px">Apartamento de Laura</span></div>
+<span style="font-family: 'IBM Plex Mono', Menlo, monospace; font-size: 12px; padding: 6px 12px; background: #55634A; color: #F3EEE6; border-radius: 999px">A TIEMPO</span>
+</div>
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px">
+<div style="height: 10px; border-radius: 999px; background: #1E2326"></div>
+<div style="height: 10px; border-radius: 999px; background: #1E2326"></div>
+<div style="height: 10px; border-radius: 999px; background: #B5532F"></div>
+<div style="height: 10px; border-radius: 999px; background: #DDD7CD"></div>
+</div>
+<div style="display: flex; flex-direction: column">
+<div class="fila" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; padding: 12px 0; border-bottom: 1px solid #DDD7CD"><span>Hito 1 · Diseño y firma</span><span style="font-family: 'IBM Plex Mono', Menlo, monospace; font-size: 14px; color: #3F4A37">PAGADO · $4.275.000</span></div>
+<div class="fila" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; padding: 12px 0; border-bottom: 1px solid #DDD7CD"><span>Hito 2 · Inicio de obra</span><span style="font-family: 'IBM Plex Mono', Menlo, monospace; font-size: 14px; color: #3F4A37">PAGADO · $12.825.000</span></div>
+<div class="fila" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; padding: 12px 0; border-bottom: 1px solid #DDD7CD"><span><b>Hito 3 · Pisos y estuco</b></span><span style="font-family: 'IBM Plex Mono', Menlo, monospace; font-size: 14px; color: #8E3F22">EN CURSO · 27 nov</span></div>
+<div class="fila" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; padding: 12px 0"><span>Hito 4 · Entrega</span><span style="font-family: 'IBM Plex Mono', Menlo, monospace; font-size: 14px; color: #4B5054">18 dic</span></div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px">
+<div style="aspect-ratio: 4 / 3; border-radius: 12px; background: repeating-linear-gradient(135deg, #8D8983 0 8px, #9D9993 8px 16px); display: flex; align-items: flex-end; padding: 8px; font-family: 'IBM Plex Mono', Menlo, monospace; font-size: 11px; color: #FFFFFF">LUN 17</div>
+<div style="aspect-ratio: 4 / 3; border-radius: 12px; background: linear-gradient(180deg, #CFC8BC 0 60%, #A7896E 60% 100%); display: flex; align-items: flex-end; padding: 8px; font-family: 'IBM Plex Mono', Menlo, monospace; font-size: 11px; color: #1E2326">MIÉ 19</div>
+<div style="aspect-ratio: 4 / 3; border-radius: 12px; background: linear-gradient(180deg, #E7E0D4 0 60%, #B99877 60% 100%); display: flex; align-items: flex-end; padding: 8px; font-family: 'IBM Plex Mono', Menlo, monospace; font-size: 11px; color: #1E2326">VIE 21</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="paquetes" class="sec" style="padding: 96px 24px; background: #E8E2D8">
+<div style="max-width: 1240px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-direction: column; gap: 12px; max-width: 760px">
+<p style="margin: 0; font-family: 'IBM Plex Mono', Menlo, monospace; font-size: 13px; letter-spacing: 0.12em; color: #8E3F22">APARTAMENTOS EN OBRA GRIS · 45 m²</p>
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif; font-weight: 800; font-size: clamp(36px, 4.6vw, 60px); line-height: 1; letter-spacing: -0.02em">Tres paquetes, precio fijo</h2>
+<p style="margin: 0; color: #4B5054">IVA incluido. Diseño incluido. Para otros tamaños, el precio se calcula por metro cuadrado.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px">
+<div style="background: #FBF9F5; border-radius: 24px; padding: 32px; display: flex; flex-direction: column; gap: 16px">
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif; font-size: 30px">Esencial</h3>
+<p style="margin: 0; font-family: 'IBM Plex Mono', Menlo, monospace; font-size: 34px; font-weight: 500">$27,9 M</p>
+<p style="margin: 0; font-family: 'IBM Plex Mono', Menlo, monospace; font-size: 14px; color: #4B5054">$620.000/m² · 5 a 6 semanas</p>
+<p style="margin: 0; color: #4B5054">Estuco y pintura, piso cerámico, dos puertas, mueble de cocina. Para mudarte ya.</p>
+<a href="#cotiza" style="margin-top: auto; display: inline-flex; justify-content: center; padding: 14px 20px; min-height: 48px; box-sizing: border-box; border: 1px solid #1E2326; color: #1E2326; text-decoration: none; font-weight: 600; border-radius: 999px">Lo quiero</a>
+</div>
+<div style="background: #1E2326; color: #F3EEE6; border-radius: 24px; padding: 32px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px"><h3 style="margin: 0; font-family: 'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif; font-size: 30px">Integral</h3><span style="font-family: 'IBM Plex Mono', Menlo, monospace; font-size: 12px; padding: 4px 10px; border: 1px solid #D86A43; color: #F0A27F; border-radius: 999px">EL MÁS ELEGIDO</span></div>
+<p style="margin: 0; font-family: 'IBM Plex Mono', Menlo, monospace; font-size: 34px; font-weight: 500">$42,8 M</p>
+<p style="margin: 0; font-family: 'IBM Plex Mono', Menlo, monospace; font-size: 14px; color: #C9C3B8">$950.000/m² · 6 a 8 semanas</p>
+<p style="margin: 0; color: #C9C3B8">Todo lo Esencial más cocina integral, dos closets, mueble de baño y asesoría de estilo.</p>
+<a href="#cotiza" style="margin-top: auto; display: inline-flex; justify-content: center; padding: 14px 20px; min-height: 48px; box-sizing: border-box; background: #B5532F; color: #FBF9F5; text-decoration: none; font-weight: 600; border-radius: 999px">Lo quiero</a>
+</div>
+<div style="background: #FBF9F5; border-radius: 24px; padding: 32px; display: flex; flex-direction: column; gap: 16px">
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif; font-size: 30px">Diseño</h3>
+<p style="margin: 0; font-family: 'IBM Plex Mono', Menlo, monospace; font-size: 34px; font-weight: 500">$65,3 M</p>
+<p style="margin: 0; font-family: 'IBM Plex Mono', Menlo, monospace; font-size: 14px; color: #4B5054">$1,45 M/m² · 8 a 10 semanas</p>
+<p style="margin: 0; color: #4B5054">Interiorismo a la medida: porcelanato, cocina y closets a medida, cielo raso con luz.</p>
+<a href="#cotiza" style="margin-top: auto; display: inline-flex; justify-content: center; padding: 14px 20px; min-height: 48px; box-sizing: border-box; border: 1px solid #1E2326; color: #1E2326; text-decoration: none; font-weight: 600; border-radius: 999px">Lo quiero</a>
+</div>
+</div>
+</div>
+</section>
+
+<section id="espacios" class="sec" style="padding: 96px 24px">
+<div style="max-width: 1240px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px">
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif; font-weight: 800; font-size: clamp(36px, 4.6vw, 60px); line-height: 1; letter-spacing: -0.02em; text-wrap: balance">Cualquier espacio en cero</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px">
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 10px">
+<div style="position: relative; aspect-ratio: 4 / 3; border-radius: 20px; overflow: hidden; background: #8D8983">
+<img src="img/hc-bano.jpg" alt="Baño en obra gris con el boceto blanco de un mueble flotante de lavamanos, espejo redondo, ducha con división de vidrio y enchape" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block">
+<span style="position: absolute; margin: 0; font-family: 'Caveat', cursive; font-weight: 700; color: #FFFFFF; line-height: 1; text-shadow: 0 1px 8px rgba(20,22,24,0.7); white-space: nowrap; font-size: clamp(20px, 1.9vw, 28px); left: 5%; top: 5%; transform: rotate(-3deg)">espejo redondo</span>
+<span style="position: absolute; margin: 0; font-family: 'Caveat', cursive; font-weight: 700; color: #FFFFFF; line-height: 1; text-shadow: 0 1px 8px rgba(20,22,24,0.7); white-space: nowrap; font-size: clamp(20px, 1.9vw, 28px); left: 5%; bottom: 6%; transform: rotate(-2deg)">mueble flotante</span>
+</div>
+<figcaption style="display: flex; flex-direction: column; gap: 4px"><span style="font-family: 'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif; font-weight: 700; font-size: 22px">Apartamentos VIS</span><span style="color: #4B5054">Recibiste en obra gris. Te lo entregamos listo para vivir, con cesantías o crédito.</span></figcaption>
+</figure>
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 10px">
+<div style="position: relative; aspect-ratio: 4 / 3; border-radius: 20px; overflow: hidden; background: #8D8983">
+<img src="img/hc-habitacion.jpg" alt="Habitación en obra gris con el boceto blanco de un closet empotrado, cama doble con cabecero, mesas de noche, banco y tapete" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block">
+<span style="position: absolute; margin: 0; font-family: 'Caveat', cursive; font-weight: 700; color: #FFFFFF; line-height: 1; text-shadow: 0 1px 8px rgba(20,22,24,0.7); white-space: nowrap; font-size: clamp(20px, 1.9vw, 28px); left: 6%; top: 4%; transform: rotate(-3deg)">closet a medida</span>
+<span style="position: absolute; margin: 0; font-family: 'Caveat', cursive; font-weight: 700; color: #FFFFFF; line-height: 1; text-shadow: 0 1px 8px rgba(20,22,24,0.7); white-space: nowrap; font-size: clamp(20px, 1.9vw, 28px); right: 5%; bottom: 5%; transform: rotate(-2deg)">cabecero en madera</span>
+</div>
+<figcaption style="display: flex; flex-direction: column; gap: 4px"><span style="font-family: 'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif; font-weight: 700; font-size: 22px">Casas y apartamentos</span><span style="color: #4B5054">Nuevos o usados. Diseño de verdad y remodelación por espacios o completa.</span></figcaption>
+</figure>
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 10px">
+<div style="position: relative; aspect-ratio: 4 / 3; border-radius: 20px; overflow: hidden; background: #8D8983">
+<img src="img/hc-local.jpg" alt="Local comercial en obra gris con el boceto blanco de un mostrador curvo, estanterías de exhibición, lámparas colgantes y un letrero" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block">
+<span style="position: absolute; margin: 0; font-family: 'Caveat', cursive; font-weight: 700; color: #FFFFFF; line-height: 1; text-shadow: 0 1px 8px rgba(20,22,24,0.7); white-space: nowrap; font-size: clamp(20px, 1.9vw, 28px); left: 79%; top: 23%; transform: rotate(-14deg)">tu marca</span>
+<span style="position: absolute; margin: 0; font-family: 'Caveat', cursive; font-weight: 700; color: #FFFFFF; line-height: 1; text-shadow: 0 1px 8px rgba(20,22,24,0.7); white-space: nowrap; font-size: clamp(20px, 1.9vw, 28px); left: 36%; bottom: 4%; transform: rotate(-2deg)">mostrador a medida</span>
+</div>
+<figcaption style="display: flex; flex-direction: column; gap: 4px"><span style="font-family: 'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif; font-weight: 700; font-size: 22px">Locales</span><span style="color: #4B5054">Tu marca convertida en espacio, con fecha de apertura por escrito.</span></figcaption>
+</figure>
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 10px">
+<div style="position: relative; aspect-ratio: 4 / 3; border-radius: 20px; overflow: hidden; background: #8D8983">
+<img src="img/hc-oficina.jpg" alt="Oficina en obra gris con el boceto blanco de una sala de juntas con división de vidrio, mesa, sillas, luminaria lineal, paneles y plantas" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block">
+<span style="position: absolute; margin: 0; font-family: 'Caveat', cursive; font-weight: 700; color: #FFFFFF; line-height: 1; text-shadow: 0 1px 8px rgba(20,22,24,0.7); white-space: nowrap; font-size: clamp(20px, 1.9vw, 28px); left: 22%; top: 27%; transform: rotate(-3deg)">panel acústico</span>
+<span style="position: absolute; margin: 0; font-family: 'Caveat', cursive; font-weight: 700; color: #FFFFFF; line-height: 1; text-shadow: 0 1px 8px rgba(20,22,24,0.7); white-space: nowrap; font-size: clamp(20px, 1.9vw, 28px); left: 30%; bottom: 5%; transform: rotate(-2deg)">sala de juntas</span>
+</div>
+<figcaption style="display: flex; flex-direction: column; gap: 4px"><span style="font-family: 'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif; font-weight: 700; font-size: 22px">Oficinas y consultorios</span><span style="color: #4B5054">Espacios de trabajo e instalaciones de salud que cumplen la norma.</span></figcaption>
+</figure>
+</div>
+<p style="margin: 0; font-family: 'IBM Plex Mono', Menlo, monospace; font-size: 13px; color: #4B5054">Imágenes de referencia generadas con IA. Al tener obras propias, cada una será una foto real del espacio en cero con su boceto encima.</p>
+</div>
+</section>
+
+<section id="financia" style="padding: 0 24px 96px">
+<div style="max-width: 1240px; margin: 0 auto; background: #B5532F; color: #FBF9F5; border-radius: 28px; padding: clamp(32px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 32px 64px; align-items: center; justify-content: space-between">
+<h2 style="margin: 0; flex: 1 1 420px; font-family: 'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif; font-weight: 800; font-size: clamp(32px, 4vw, 52px); line-height: 1.02; letter-spacing: -0.02em; text-wrap: balance">Págalo con tus cesantías o con crédito de acabados</h2>
+<ul style="margin: 0; padding: 0; list-style: none; flex: 1 1 320px; display: flex; flex-direction: column; gap: 14px; font-size: 18px">
+<li>Te damos la cotización formal para retirar tus cesantías.</li>
+<li>Crédito de acabados con [ALIADO FINANCIERO]: el banco nos paga por avance.</li>
+<li>Módulos por etapas si prefieres empezar por cocina y baño.</li>
+</ul>
+</div>
+</section>
+
+
+
+<section id="preguntas" class="sec" style="padding: 96px 24px">
+<div style="max-width: 1240px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 40px 64px">
+<h2 style="margin: 0; flex: 1 1 320px; font-family: 'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif; font-weight: 800; font-size: clamp(36px, 4.6vw, 60px); line-height: 1; letter-spacing: -0.02em">Preguntas frecuentes</h2>
+<div style="flex: 2 1 560px; display: flex; flex-direction: column; border-top: 2px solid #1E2326">
+<details open="" style="border-bottom: 1px solid #DDD7CD; padding: 20px 0"><summary style="cursor: pointer; font-family: 'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif; font-weight: 700; font-size: 22px">¿Cuánto tengo que pagar para empezar?</summary><p style="margin: 12px 0 0; color: #4B5054">El 10% al firmar, que incluye el diseño. El resto lo pagas en tres hitos, cada uno cuando ves el avance y firmas el acta.</p></details>
+<details style="border-bottom: 1px solid #DDD7CD; padding: 20px 0"><summary style="cursor: pointer; font-family: 'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif; font-weight: 700; font-size: 22px">¿Puedo pagar con mis cesantías?</summary><p style="margin: 12px 0 0; color: #4B5054">Sí. Te damos la cotización formal y la factura que pide tu fondo para retirarlas por mejora de vivienda.</p></details>
+<details style="border-bottom: 1px solid #DDD7CD; padding: 20px 0"><summary style="cursor: pointer; font-family: 'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif; font-weight: 700; font-size: 22px">¿Qué pasa si se atrasan?</summary><p style="margin: 12px 0 0; color: #4B5054">La fecha de entrega queda en el contrato. Si el atraso es nuestro, [CONDICIÓN DE DEVOLUCIÓN SEGÚN CONTRATO].</p></details>
+<details style="border-bottom: 1px solid #DDD7CD; padding: 20px 0"><summary style="cursor: pointer; font-family: 'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif; font-weight: 700; font-size: 22px">¿Pueden tumbar muros para abrir la cocina?</summary><p style="margin: 12px 0 0; color: #4B5054">Muchos apartamentos VIS tienen muros que sostienen el edificio. Solo los tocamos con concepto de un ingeniero y la licencia que corresponda; si no se puede, te lo decimos.</p></details>
+<details style="border-bottom: 1px solid #DDD7CD; padding: 20px 0"><summary style="cursor: pointer; font-family: 'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif; font-weight: 700; font-size: 22px">¿Trabajan fuera de Bogotá?</summary><p style="margin: 12px 0 0; color: #4B5054">Sí, en la Sabana: Mosquera, Madrid, Funza, Soacha, Chía, Cajicá y municipios cercanos.</p></details>
+<details style="border-bottom: 1px solid #DDD7CD; padding: 20px 0"><summary style="cursor: pointer; font-family: 'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif; font-weight: 700; font-size: 22px">¿Qué garantía tengo?</summary><p style="margin: 12px 0 0; color: #4B5054">Un año en acabados y [GARANTÍA DE CARPINTERÍA SEGÚN CONTRATO], con una visita de revisión a los seis meses.</p></details>
+</div>
+</div>
+</section>
+
+<section id="cotiza" class="sec" style="padding: 96px 24px; background: #1E2326; color: #F3EEE6">
+<div style="max-width: 1240px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 40px 64px; justify-content: space-between">
+<div style="flex: 1 1 440px; display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif; font-weight: 800; font-size: clamp(40px, 5vw, 72px); line-height: 0.98; letter-spacing: -0.03em">Cero sorpresas.</h2>
+<p style="margin: 0; color: #C9C3B8; max-width: 440px">Cuéntanos de tu espacio y te enviamos una cotización con fechas y pagos por hito en 72 horas.</p>
+</div>
+<form id="cotizar" class="form" style="flex: 1 1 400px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px">
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; color: #C9C3B8">Nombre<input id="nombre" type="text" placeholder="Laura Rodríguez" style="min-height: 48px; padding: 0 14px; border-radius: 12px; border: 1px solid #4B5054; background: #2A3034; color: #F3EEE6; font: inherit; font-size: 16px"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; color: #C9C3B8">WhatsApp<input id="whatsapp" type="tel" placeholder="300 000 0000" style="min-height: 48px; padding: 0 14px; border-radius: 12px; border: 1px solid #4B5054; background: #2A3034; color: #F3EEE6; font: inherit; font-size: 16px"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; color: #C9C3B8">Tipo de espacio<select id="tipo" style="min-height: 48px; padding: 0 14px; border-radius: 12px; border: 1px solid #4B5054; background: #2A3034; color: #F3EEE6; font: inherit; font-size: 16px"><option>Apartamento en obra gris</option><option>Casa o apartamento usado</option><option>Local</option><option>Oficina o consultorio</option></select></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; color: #C9C3B8">Metros cuadrados<input id="m2" type="number" placeholder="45" style="min-height: 48px; padding: 0 14px; border-radius: 12px; border: 1px solid #4B5054; background: #2A3034; color: #F3EEE6; font: inherit; font-size: 16px"></label>
+<button type="submit" style="grid-column: 1 / -1; min-height: 52px; border: 0; border-radius: 999px; background: #B5532F; color: #FBF9F5; font: inherit; font-weight: 600; font-size: 17px; cursor: pointer">Quiero mi cotización</button>
+<p id="gracias" hidden style="grid-column: 1 / -1; margin: 0; padding: 14px 18px; border-radius: 12px; background: #2A3034; color: #F3EEE6; font-size: 15px">Gracias. Esta es una versión de muestra para los socios: el formulario todavía no envía datos.</p>
+</form>
+</div>
+</section>
+
+<footer style="padding: 32px 24px; background: #161A1C; color: #A9A49B; font-size: 14px">
+<div style="max-width: 1240px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px">
+<span style="font-family: 'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif; font-weight: 800; font-size: 20px; color: #F3EEE6">hábitat cero</span>
+<span>Bogotá y la Sabana · [WHATSAPP] · [CORREO] · Hábitat Cero SAS</span>
+</div>
+</footer>
+</div>
+<script>
+(function(){
+ var hdr=document.querySelector('header'),b=document.getElementById('menu');
+ b.addEventListener('click',function(){var o=hdr.classList.toggle('abierto');b.setAttribute('aria-expanded',o);b.textContent=o?'Cerrar':'Menú'});
+ document.querySelectorAll('.nav-links a').forEach(function(a){a.addEventListener('click',function(){hdr.classList.remove('abierto');b.setAttribute('aria-expanded','false');b.textContent='Menú'})});
+ document.getElementById('cotizar').addEventListener('submit',function(e){e.preventDefault();document.getElementById('gracias').hidden=false});
+})();
+</script>
+</body>
+</html>
